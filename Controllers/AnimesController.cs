@@ -46,8 +46,15 @@ namespace Entertainment.Controllers
             }
         }
 
-        public IActionResult EpisodePage()
+        [HttpGet("{url_encode}")]
+        public IActionResult EpisodePage(string url_encode)
         {
+            // TempData["movie_id"] = movie_id;
+            string url_decode = System.Uri.UnescapeDataString(url_encode);
+            GetMovieId(url_decode);
+            // return GetResponseText("http://vuighe.net/api/v2/films/" + movie_id + "/episodes/" + 118735);
+            GetEpisodesId();
+            // GetEpisodeLink(Episodes[Episodes.Count - 1].id);
             return View(Episodes);
         }
 
@@ -55,13 +62,11 @@ namespace Entertainment.Controllers
         [HttpGet("{url_encode}")]
         public string GetAnimes(string url_encode)
         {
-           string url_decode = System.Uri.UnescapeDataString(url_encode);
-           GetMovieId(url_decode);
+            string url_decode = System.Uri.UnescapeDataString(url_encode);
+            GetMovieId(url_decode);
             // return GetResponseText("http://vuighe.net/api/v2/films/" + movie_id + "/episodes/" + 118735);
-           GetEpisodesId();
-           return GetEpisodeLink(Episodes[Episodes.Count - 1].id);
-            // return "asdasd";
-            // return EpisodeLinks[3].id;
+            GetEpisodesId();
+            return GetEpisodeLink(Episodes[Episodes.Count - 1].id);
         }
 
         /// <summary>Return Movie Id and assign for movie_id at global scope</summary>

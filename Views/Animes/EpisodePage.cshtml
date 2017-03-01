@@ -1,9 +1,16 @@
-@*@model IEnumerable<Entertainment.Models.Episode>
+@model IList<Entertainment.Models.Episode>
 
 
-
-    @foreach (var episode in Model){
-        <h1>@episode.id</h1>
+@*    @{
+        int i = 0;
+        foreach (var episode in Model){
+        <button>Tap @i</button>
+        i++;
+        }
     }
+    *@
 
-*@
+    @foreach(var episode in Model){
+        <h3>@episode.full_name</h3>
+        <button>@episode.id</button>
+    }
