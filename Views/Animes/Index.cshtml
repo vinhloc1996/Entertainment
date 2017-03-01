@@ -1,1 +1,79 @@
-<h1>Hellp</h1>
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers" 
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Get Link</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="../../Content/Startup/css/bootstrap.min.css">
+    <!-- Google fonts - Open Sans-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,400italic">
+    <!-- Stroke 7 font by Pixeden (http://www.pixeden.com/icon-fonts/stroke-7-icon-font-set)-->
+    <link rel="stylesheet" href="../../Content/Startup/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="../../Content/Startup/css/helper.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="../../Content/Startup/css/style.default.css" id="theme-stylesheet">
+    <!-- owl carousel-->
+    <link rel="stylesheet" href="../../Content/Startup/css/owl.carousel.css">
+    <link rel="stylesheet" href="../../Content/Startup/css/owl.theme.css">
+    <!-- plugins-->
+    <link rel="stylesheet" href="../../Content/Startup/css/simpletextrotator">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="../../Content/Startup/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../../Content/Startup/Bebo_100.png">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body data-spy="scroll" data-target="#navigation" data-offset="120">
+    <div id="all">
+      <header class="header">
+        <div role="navigation" class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header"><a href="#all" class="navbar-brand scroll-to"><img src="../../Content/Startup/img/Bebo_50.png" alt="logo" class="hidden-xs hidden-sm"></a>
+              <div class="navbar-buttons">
+                <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle navbar-btn">Menu<i class="pe-7s-menu"></i></button>
+              </div>
+            </div>
+            <div id="navigation" class="collapse navbar-collapse navbar-right">
+              <ul class="nav navbar-nav">
+                <li><a href="#features" class="scroll-to">VuiGhe</a></li>
+                <li><a href="#text" class="scroll-to">PhimMoi</a></li>
+                <li><a href="#integrations" class="scroll-to">HDOnline</a></li>
+                <li><a href="#testimonials" class="scroll-to">Anime47</a></li>
+                <li><a href="#contact" class="scroll-to">HamTruyen</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section id="intro" class="text-intro no-padding-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1><span class="rotate">Enter the original link for getting all links</span></h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              
+              <form asp-controller="Animes" asp-action="Index" method="post" class="form-inline margin-top sign-up-form">
+                <input id="url_encode" name="url_encode"  placeholder="Link" class="form-control">
+                <input id="submit_intro" type="submit" value="Get Link" class="btn btn-primary">
+              </form>
+            </div>
+            <div class="col-md-12 col-lg-8 col-lg-offset-2">
+              <p class="margin-bottom--zero"><img alt="" src="../../Content/Startup/img/airbnb.png" class="img-responsive"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
